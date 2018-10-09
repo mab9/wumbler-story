@@ -19,5 +19,11 @@ Gemessen wird jeweils an bestimmten Punkte der Waschmaschiene.
 
 ## Resultate
 
+
+
+## KALIBRIERUNG 
+
+Für die Kalibrierung des Sensors werden während zwei Minuten die 
+Daten eingelesen ohne, dass die Waschmaschiene im Betrieb ist. Dies kommt einem Stillstand oder einem Aus der Waschmaschine gleich. Diese Daten werden zu einem späteren Zeitpunkt für das Ausrechnen der Differenz zu den Bewegungsdaten verwendet. Damit soll anhand einer gescheiten Methode festgestellt werden, wann die Waschmaschiene in Betrieb ist.
  
 
