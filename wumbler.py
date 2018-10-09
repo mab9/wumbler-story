@@ -2,6 +2,7 @@
 
 import time
 import uuid
+import datetime
 
 #import calibrator
 #import sensor
@@ -10,12 +11,13 @@ import uuid
 
 laundry_id = uuid.uuid4()
 calibration = None
-data_path = "datum.wd"
+path_postfix = ".wd"
+path="date_file"
 
 
 def start_wumblering(laundry_id):
     print("laundry:", laundry_id, "has started")
-    file = open(data_path, "a")
+    file = open(path, "a")
 
     # while True:
     data = [laundry_id, "&"]
@@ -32,5 +34,22 @@ def calibrate_wumbler(laundry_id):
     #calibration = calibrator.calibrate(laundry_id, 4)
 
 
+def create_data_file(start):
+    number = start
+    global path
+    try:
+        date = datetime.datetime.now()
+        file_name = str(date.strftime("%Y-%m-%d"))
+        file_name += "_" + str(number) + str(path_postfix)
+        open(file_name, 'x')
+        path = file_name
+    except FileExistsError:
+        number += 1
+        create_data_file(number)
+
+
+
+
 # calibrateWumbler(laundry_id)
+create_data_file(0)
 start_wumblering(laundry_id)
