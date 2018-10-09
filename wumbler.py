@@ -3,8 +3,6 @@
 import time
 import uuid
 import datetime
-
-#import calibrator
 #import sensor
 
 # https://mlhub.cs.technik.fhnw.ch/user/marcantoine.bruelhart/lab - rQ3nzu
@@ -21,17 +19,10 @@ def start_wumblering(laundry_id):
     file.write("laundry: " + str(laundry_id) + " has started\n")
 
 # while True:
-
-
     for _ in range(10):
-        #data.append(sensor.readAcc())
+        # data.append(sensor.readAcc())
         time.sleep(0.1)
         file.write(" !\n")
-
-
-def calibrate_wumbler(laundry_id):
-    global calibration
-    #calibration = calibrator.calibrate(laundry_id, 4)
 
 
 def create_data_file(number):
@@ -47,8 +38,5 @@ def create_data_file(number):
         path = file_name
 
 
-
-
-# calibrateWumbler(laundry_id)
 create_data_file(0)
 start_wumblering(laundry_id)
