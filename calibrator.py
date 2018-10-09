@@ -1,12 +1,13 @@
-#! /usr/bin/python
+#!/usr/bin/env python3$
 
-import sys
-import time
-import sensor
 import math
+import time
 
-def calibrate(laundryId, duration): 
-    if duration is None: 
+import sensor
+
+
+def calibrate(laundryId, duration):
+    if duration is None:
         duration = 5
 
     print("start calibration for:", duration, "seconds")
@@ -26,14 +27,14 @@ def calibrate(laundryId, duration):
         z.append(data[2])
         time.sleep(0.1)
 
-    return prepareData(laundryId, x,y,z)
+    return prepareData(laundryId, x, y, z)
 
 
-def calcAvg(data): 
+def calcAvg(data):
     sum = 0
     for x in data:
         sum += x
-    return int(sum/len(data))
+    return int(sum / len(data))
 
 
 def calcStandardDeviation(lst):
@@ -46,7 +47,7 @@ def calcStandardDeviation(lst):
     return int(math.sqrt(variance))
 
 
-def prepareData(laundryId, x,y,z):
+def prepareData(laundryId, x, y, z):
     data = []
     data.append(laundryId)
     data.append(len(x))
@@ -58,4 +59,3 @@ def prepareData(laundryId, x,y,z):
     data.append(calcStandardDeviation(z))
     data.append("&")
     return data
-

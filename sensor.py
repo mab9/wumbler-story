@@ -1,10 +1,8 @@
-#! /usr/bin/python
+#!/usr/bin/env python3
 
 import time
+
 import smbus
-import math
-import requests
-import uuid
 
 # Register
 power_mgmt_1 = 0x6b
@@ -21,6 +19,7 @@ ACCEL_SCALE_MODIFIER_2G = 16384.0
 ACCEL_SCALE_MODIFIER_4G = 8192.0
 ACCEL_SCALE_MODIFIER_8G = 4096.0
 ACCEL_SCALE_MODIFIER_16G = 2048.0
+
 
 def read_byte(reg):
     return bus.read_byte_data(address, reg)
@@ -40,23 +39,24 @@ def read_word_2c(reg):
     else:
         return val
 
+
 bus = smbus.SMBus(1)
 address = 0x68
 
 # Aktivieren, um das Modul ansprechen zu koennen
 
 bus.write_byte_data(address, power_mgmt_1, 0)
-bus.write_byte_data(address, power_mgmt_1,ACCEL_2G)
-
+bus.write_byte_data(address, power_mgmt_1, ACCEL_2G)
 
 minute = 1
 seconds = 60
 timeout = time.time() + seconds * minute
 
-#filename = time.strftime("%Y%m%d-%H:%M")
-def readAcc():  
-     data = []
-     data.append(abs(read_word_2c(0x3b)))
-     data.append(abs(read_word_2c(0x3d)))
-     data.append(abs(read_word_2c(0x3f)))
-     return data
+
+# filename = time.strftime("%Y%m%d-%H:%M")
+def readAcc():
+    data = []
+    data.append(abs(read_word_2c(0x3b)))
+    data.append(abs(read_word_2c(0x3d)))
+    data.append(abs(read_word_2c(0x3f)))
+    return data
