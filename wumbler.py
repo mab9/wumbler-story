@@ -3,36 +3,34 @@
 import time
 import uuid
 
-import calibrator
-import sensor
+#import calibrator
+#import sensor
 
-#https://mlhub.cs.technik.fhnw.ch/user/marcantoine.bruelhart/lab - rQ3nzu
+# https://mlhub.cs.technik.fhnw.ch/user/marcantoine.bruelhart/lab - rQ3nzu
 
-laundryId = uuid.uuid4()
+laundry_id = uuid.uuid4()
 calibration = None
-dataPath = "datum.wd"
+data_path = "datum.wd"
 
 
-def startWumblering(laundryId):
-    print("laundry: ", laundryId, " has started")
-    file = open(dataPath, "a")
+def start_wumblering(laundry_id):
+    print("laundry:", laundry_id, "has started")
+    file = open(data_path, "a")
 
-    while True:
-        data = [laundryId, "&"]
+    # while True:
+    data = [laundry_id, "&"]
 
-        for _ in range(10):
-            data.append(sensor.readAcc())
-            data.append("&")
-            time.sleep(0.1)
-
-        file.write("Now the file has one more line!")
-
+    for _ in range(10):
+        #data.append(sensor.readAcc())
+        data.append("&")
+        time.sleep(0.1)
+        file.write("Now the file has one more line!\n")
 
 
-def calibrateWumbler(laundryId):
+def calibrate_wumbler(laundry_id):
     global calibration
-    calibration = calibrator.calibrate(laundryId, 4)
+    #calibration = calibrator.calibrate(laundry_id, 4)
 
 
-#calibrateWumbler(laundryId)
-startWumblering(laundryId)
+# calibrateWumbler(laundry_id)
+start_wumblering(laundry_id)
