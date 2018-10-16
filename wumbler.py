@@ -21,8 +21,13 @@ def start_wumblering(laundry_id):
 # while True:
     for _ in range(10):
         # data.append(sensor.readAcc())
-        time.sleep(0.1)
-        file.write(" !\n")
+        data = []
+        data.append("bla")
+        data.append("bla")
+        #file.write(data)
+        #time.sleep(0.1)
+
+    file.close()
 
 
 def create_data_file(number):
@@ -31,12 +36,18 @@ def create_data_file(number):
     file_name = str(date.strftime("%Y-%m-%d")) + "-" + str(number) + str(path_postfix)
 
     try:
-        open(file_name, 'x')
-    except FileExistsError:
-        create_data_file(number + 1)
-    finally:
+        file = open(file_name, 'x')
+        file.close()
         path = file_name
+    except FileExistsError:
+        increment = number + 1
+        create_data_file(increment)
+    finally:
+        pass
 
 
 create_data_file(0)
+
+
+# exit script with CTRL-D when laundry program is finished
 start_wumblering(laundry_id)

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import time
-
 import smbus
 
 # Register
@@ -43,17 +42,18 @@ def read_word_2c(reg):
 bus = smbus.SMBus(1)
 address = 0x68
 
-# Aktivieren, um das Modul ansprechen zu koennen
 
+# Aktivieren, um das Modul ansprechen zu koennen
 bus.write_byte_data(address, power_mgmt_1, 0)
 bus.write_byte_data(address, power_mgmt_1, ACCEL_2G)
 
+
+# for calibration
 minute = 1
 seconds = 60
 timeout = time.time() + seconds * minute
 
 
-# filename = time.strftime("%Y%m%d-%H:%M")
 def readAcc():
     data = []
     data.append(abs(read_word_2c(0x3b)))
