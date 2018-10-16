@@ -15,8 +15,10 @@ Nachfolgend eine kurze Beschreibung:
 3. Python Script um MPU-6050 Modul anzusprechen
 4. Python Script für das Sammeln der Daten.
 
-## Datenquelle und Waschmaschiene
-Waschmaschiene, Typ, Zustand, etc
+## Waschmaschiene
+Schulthess Spirit topLine 8010
+Zustand gebraucht, hat einige Jahre auf dem Bukel.
+Siehe Bilder unter wumbler-story/img
 
 ## Messmethode
 Das Raspberry pi wird an der Maschiene befestigt. Der MPU Sensor wird mit Klebeband an das 
