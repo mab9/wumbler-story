@@ -27,3 +27,6 @@ Für die Kalibrierung des Sensors werden während zwei Minuten die
 Daten eingelesen ohne, dass die Waschmaschiene im Betrieb ist. Dies kommt einem Stillstand oder einem Aus der Waschmaschine gleich. Diese Daten werden zu einem späteren Zeitpunkt für das Ausrechnen der Differenz zu den Bewegungsdaten verwendet. Damit soll anhand einer gescheiten Methode festgestellt werden, wann die Waschmaschiene in Betrieb ist.
  
 
+
+
+https://tutorials-raspberrypi.com/measuring-rotation-and-acceleration-raspberry-pi/

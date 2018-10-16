@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-import time
-import uuid
 import datetime
-#import sensor
+import uuid
+import sensor
+import time
 
 # https://mlhub.cs.technik.fhnw.ch/user/marcantoine.bruelhart/lab - rQ3nzu
 
@@ -17,17 +17,14 @@ def start_wumblering(laundry_id):
     print("laundry:", laundry_id, "has started")
     file = open(path, "a")
     file.write("laundry: " + str(laundry_id) + " has started\n")
-    file.write("x, y, z coordinates\n")
+    file.write("x, y, z, sum\n")
 
-# while True:
-    for _ in range(10):
-        # data.append(sensor.readAcc())
-        data = []
-        #data.append("bla")
-        #data.append("bla")
-        file.write(", " . join(data) + "\n")
-        #time.sleep(0.1)
-    file.close()
+    while True:
+        for _ in range(10):
+            data = [sensor.readAcc()]
+            file.write(", ".join(data) + "\n")
+            time.sleep(0.1)
+            #file.close()
 
 
 def create_data_file(number):
@@ -47,7 +44,6 @@ def create_data_file(number):
 
 
 create_data_file(0)
-
 
 # exit script with CTRL-D when laundry program is finished
 start_wumblering(laundry_id)
