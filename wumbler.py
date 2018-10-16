@@ -17,16 +17,16 @@ def start_wumblering(laundry_id):
     print("laundry:", laundry_id, "has started")
     file = open(path, "a")
     file.write("laundry: " + str(laundry_id) + " has started\n")
+    file.write("x, y, z coordinates\n")
 
 # while True:
     for _ in range(10):
         # data.append(sensor.readAcc())
         data = []
-        data.append("bla")
-        data.append("bla")
-        #file.write(data)
+        #data.append("bla")
+        #data.append("bla")
+        file.write(", " . join(data) + "\n")
         #time.sleep(0.1)
-
     file.close()
 
 
