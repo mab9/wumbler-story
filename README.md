@@ -2,31 +2,29 @@
 Das Ziel dieses Projekts ist es, einen Datensatz zu ’sammeln’ und zu beschreiben, allenfalls daraus eine zuverlässige Messmethode für das Wumbler Projekt zu erstellen. 
 
 Damit das Ziel erreicht werden kann, werden mehrere Messungen der Bewegungen einer Waschmaschiene erstellt. Die Messdaten werden anschliessend aufbereitet und sollen eine Aussage über den 
-Waschmaschienen Zustand wiedergeben.  
-Dafür soll eine gute Messmethode mit aussagekräftige Resultaten gefunden werden.  
+Waschmaschienen Zustand wiedergeben. Dafür soll eine gute Messmethode mit aussagekräftige Resultaten gefunden werden.  
 
 
-## Werkzeuge
-Als Werkzeuge wird ein Raspberry PI Modell X und dem MPU-6050 Sensor verwendet.
-Das Setup wurde mit der Anleitung im PDF oder WWW xxx gemacht.
+## Werkzeuge und Setup
+Als Werkzeuge wird ein Raspberry PI Modell 3 und dem MPU-6050 Sensor verwendet.
+Das Setup wurde mit der Anleitung: https://tutorials-raspberrypi.com/measuring-rotation-and-acceleration-raspberry-pi/ erstellt.
+Nachfolgend eine kurze Beschreibung:
 
+1. Raspberry PI Image Setup
+2. Config der I2C Schnittstelle
+3. Python Script um MPU-6050 Modul anzusprechen
+4. Python Script für das Sammeln der Daten.
 
 ## Datenquelle und Waschmaschiene
 Waschmaschiene, Typ, Zustand, etc
 
 ## Messmethode
-Gemessen wird jeweils an bestimmten Punkte der Waschmaschiene.
+Das Raspberry pi wird an der Maschiene befestigt. Der MPU Sensor wird mit Klebeband an das 
+Gehäuse der Waschmaschiene befestigt. Somit wird sichergestellt, dass z.B durch das Gehäuse 
+keine Vibrationen abgefedert werden. 
+
+Gemessen wurde 1 Minute vor dem Waschgang bei augeschlateter Waschmaschiene und bis ca. 1 Minute
+nach dem Waschgang.
 
 ## Resultate
-
-
-
-## KALIBRIERUNG 
-
-Für die Kalibrierung des Sensors werden während zwei Minuten die 
-Daten eingelesen ohne, dass die Waschmaschiene im Betrieb ist. Dies kommt einem Stillstand oder einem Aus der Waschmaschine gleich. Diese Daten werden zu einem späteren Zeitpunkt für das Ausrechnen der Differenz zu den Bewegungsdaten verwendet. Damit soll anhand einer gescheiten Methode festgestellt werden, wann die Waschmaschiene in Betrieb ist.
- 
-
-
-
-https://tutorials-raspberrypi.com/measuring-rotation-and-acceleration-raspberry-pi/
+Die ersten Resultate sind in der Datei 2018-10-16-0.wd.
