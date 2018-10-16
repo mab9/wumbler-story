@@ -1,3 +1,8 @@
+created by: 
+
+marc-antoine bruelhart -
+marcantoine.bruelhart@gmail.com
+
 # wumbler-story
 Das Ziel dieses Projekts ist es, einen Datensatz zu ’sammeln’ und zu beschreiben, allenfalls daraus eine zuverlässige Messmethode für das Wumbler Projekt zu erstellen. 
 
@@ -36,6 +41,7 @@ Die Datei besteht aus zwei Header Zeilen und den Rohdaten.
 Die Headers beschreiben die ID des Waschgangs und x, y, z die Sensordaten. Beispiel:
 
 laundry: ce75f565-4b90-4421-9764-ae1304c4b6fb has started
+
 x,y,z
 
 
