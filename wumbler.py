@@ -17,7 +17,7 @@ def start_wumblering(laundry_id):
     print("laundry:", laundry_id, "has started")
     file = open(path, "a")
     file.write("laundry: " + str(laundry_id) + " has started\n")
-    file.write("x, y, z, sum\n")
+    file.write("x, y, z\n")
 
     while True:
         for _ in range(10):

@@ -29,4 +29,14 @@ Gemessen wurde 1 Minute vor dem Waschgang bei augeschlateter Waschmaschiene und 
 nach dem Waschgang.
 
 ## Resultate
-Die ersten Resultate sind in der Datei 2018-10-16-0.wd.
+Die ersten Resultate sind in der Datei 2018-10-16-0.wd abgelegt.
+Im Dateinamen steht das Datum der Datenerhebung.
+Die Datei besteht aus zwei Header Zeilen und den Rohdaten.
+
+Die Headers beschreiben die ID des Waschgangs und x, y, z die Sensordaten. Beispiel:
+
+laundry: ce75f565-4b90-4421-9764-ae1304c4b6fb has started
+x,y,z
+
+
+Die x,y,z Dimensionen stehen für die Beschleunigung in die jeweilige Richtung. Für mehr Informationen siehe Datenblatt unter: https://www.invensense.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf  
