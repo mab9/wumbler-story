@@ -1,12 +1,12 @@
-created by: 
+created by:
 
 marc-antoine bruelhart -
 marcantoine.bruelhart@gmail.com
 
 # wumbler-story
-Das Ziel dieses Projekts ist es, einen Datensatz zu ’sammeln’ und zu beschreiben, allenfalls daraus eine zuverlässige Messmethode für das Wumbler Projekt zu erstellen. 
+Das Ziel dieses Projekts ist es, einen Datensatz zu ’sammeln’ und zu beschreiben, allenfalls daraus eine zuverlässige Messmethode für das Wumbler Projekt zu erstellen.
 
-Damit das Ziel erreicht werden kann, werden mehrere Messungen der Bewegungen einer Waschmaschiene erstellt. Die Messdaten werden anschliessend aufbereitet und sollen eine Aussage über den 
+Damit das Ziel erreicht werden kann, werden mehrere Messungen der Bewegungen einer Waschmaschiene erstellt. Die Messdaten werden anschliessend aufbereitet und sollen eine Aussage über den
 Waschmaschienen Zustand wiedergeben. Dafür soll eine gute Messmethode mit aussagekräftige Resultaten gefunden werden.  
 
 
@@ -26,19 +26,17 @@ Zustand gebraucht, hat einige Jahre auf dem Bukel.
 Siehe Bilder unter wumbler-story/img
 
 ## Messmethode
-Das Raspberry pi wird an der Maschiene befestigt. Der MPU Sensor wird mit Klebeband an das 
-Gehäuse der Waschmaschiene befestigt. Somit wird sichergestellt, dass z.B durch das Gehäuse 
-keine Vibrationen abgefedert werden. 
+Das Raspberry pi wird an der Maschiene befestigt. Der MPU Sensor wird mit Klebeband an das
+Gehäuse der Waschmaschiene befestigt. Somit wird sichergestellt, dass z.B durch das Gehäuse
+keine Vibrationen abgefedert werden.
 
 Gemessen wurde 1 Minute vor dem Waschgang bei augeschlateter Waschmaschiene und bis ca. 1 Minute
 nach dem Waschgang.
 
 ## Resultate
-Die ersten Resultate sind in der Datei 2018-10-16-0.wd abgelegt.
-Im Dateinamen steht das Datum der Datenerhebung.
-Die Datei besteht aus zwei Header Zeilen und den Rohdaten.
+Die ersten Resultate sind in der Datei 2018-10-16-0.wd abgelegt. Sie besteht aus 23785 x,y und z Koordinaten. Die Datenerhebung fand am 2018-10-16 statt. Das Erhebungsdatum steht jeweils in den ersten 3 Zahlen im Dateinamen mit dem Format, JJJJ-MM-DD.
 
-Die Headers beschreiben die ID des Waschgangs und x, y, z die Sensordaten. Beispiel:
+Die Datei besteht aus zwei Header Zeilen und den Rohdaten. Die Headers beschreiben die ID des Waschgangs und x, y, z die Sensordaten. Beispiel:
 
 laundry: ce75f565-4b90-4421-9764-ae1304c4b6fb has started
 
