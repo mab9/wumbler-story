@@ -38,9 +38,13 @@ Die ersten Resultate sind in der Datei 2018-10-16-0.wd abgelegt. Sie besteht aus
 
 Die Datei besteht aus zwei Header Zeilen und den Rohdaten. Die Headers beschreiben die ID des Waschgangs und x, y, z die Sensordaten. Beispiel:
 
+
 laundry: ce75f565-4b90-4421-9764-ae1304c4b6fb has started
 
-x,y,z
+| x             | y             | z            |
+|:-------------:|:-------------:|:------------:|
+| -0.9760742188 | -0.0837402344 | 0.3759765625 |
+| -0.9592285156 | -0.0820312500 | 0.3898925781 |
 
 
 Die x,y,z Dimensionen stehen für die Beschleunigung in die jeweilige Richtung. Für mehr Informationen siehe Datenblatt unter: https://www.invensense.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf  
