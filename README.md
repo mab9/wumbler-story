@@ -30,7 +30,7 @@ Das Raspberry pi wird an der Maschiene befestigt. Der MPU Sensor wird mit Klebeb
 Gehäuse der Waschmaschiene befestigt. Somit wird sichergestellt, dass z.B durch das Gehäuse
 keine Vibrationen abgefedert werden.
 
-Gemessen wurde 1 Minute vor dem Waschgang bei augeschlateter Waschmaschiene und bis ca. 1 Minute
+Gemessen wurde 1 Minute vor dem Waschgang bei auseschlateter Waschmaschiene und bis ca. 1 Minute
 nach dem Waschgang.
 
 ## Resultate
