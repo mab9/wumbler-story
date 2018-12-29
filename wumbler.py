@@ -21,8 +21,9 @@ def start_wumblering(laundry_id):
 
     while True:
         for _ in range(10):
-            data = [sensor.readAcc()]
-            file.write(", ".join(data) + "\n")
+            data = sensor.readAcc()
+            flatten = ", ".join(map(str,data))
+            file.write(flatten + "\n")
             time.sleep(0.1)
             #file.close()
 
