@@ -48,3 +48,7 @@ laundry: ce75f565-4b90-4421-9764-ae1304c4b6fb has started
 
 
 Die x,y,z Dimensionen stehen für die Beschleunigung in die jeweilige Richtung. Für mehr Informationen siehe Datenblatt unter: https://www.invensense.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf  
+
+
+
+J9CA0pw3vT9RxpAWbGbKWXToUG1Hr
